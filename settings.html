@@ -546,8 +546,23 @@
         </div>
 
         <div class="tab-content active" id="themes">
+            <h1>Themes</h1>
             <div class="theme-grid">
-                <button class="theme-button" data-theme="light">Fracture</button>
+                <button class="theme-button" data-theme="royal-gloom">Royal Gloom (Default)</button>
+                <button class="theme-button" data-theme="crimson-night">Crimson Night</button>
+                <button class="theme-button" data-theme="midnight-ember">Midnight Ember</button>
+                <button class="theme-button" data-theme="cyber-ice">Cyber Ice</button>
+                <button class="theme-button" data-theme="digital-forest">Digital Forest</button>
+                <button class="theme-button" data-theme="obsidian-sky">Obsidian Sky</button>
+                <button class="theme-button" data-theme="molten-core">Molten Core</button>
+                <button class="theme-button" data-theme="sunken-alloy">Sunken Alloy</button>
+                <button class="theme-button" data-theme="cyberpunk-dusk">Cyberpunk</button>
+                <button class="theme-button" data-theme="retro-90s-pop">Eyesore</button>
+                <button class="theme-button" data-theme="steampunk-brass">Steampunk Brass</button>
+                <button class="theme-button" data-theme="mustard-gold">Gold</button>
+            </div>
+            <h1>Old Themes</h1>
+            <div class="theme-grid">
                 <button class="theme-button" data-theme="cherry">Cherry</button>
                 <button class="theme-button" data-theme="ocean">Ocean</button>
                 <button class="theme-button" data-theme="forest">Forest</button>
@@ -579,10 +594,9 @@
                 <button class="theme-button" data-theme="desert-mirage">Desert Mirage</button>
                 <button class="theme-button" data-theme="cyber-punk-pastel">Cyber Pastel</button>
                 <button class="theme-button" data-theme="ethereal-nebula">Nebula</button>
-                <button class="theme-button" data-theme="crimson-night">Crimson Night</button>
             </div>
         </div>
-
+<br>
         <div class="tab-content" id="background">
             <div class="background-settings">
                 <div class="background-option">
@@ -599,6 +613,7 @@
                         <div class="image-controls">
                             <div class="image-actions">
                                 <button class="control-button" id="clear-bg">Clear Background</button>
+                                <button class="control-button" id="save-bg">Save Background</button>
                             </div>
                             <div class="toggle-container">
                                 <label class="toggle-switch">
@@ -678,16 +693,23 @@
             blurValue.textContent = blurSlider.value;
         });
 
-        // File upload preview
-        document.getElementById('bg-upload').addEventListener('change', function(e) {
-            if (e.target.files && e.target.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    document.body.style.backgroundImage = `url(${event.target.result})`;
-                }
-                reader.readAsDataURL(e.target.files[0]);
-            }
-        });
+        document.getElementById('bg-upload').addEventListener('change', function (e) {
+    if (e.target.files && e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            // Update the saved settings used by the background script
+            const savedSettings = JSON.parse(localStorage.getItem('bgSettings')) || {};
+            savedSettings.url = event.target.result;
+            localStorage.setItem('bgSettings', JSON.stringify(savedSettings));
+
+            // Trigger re-application of settings via the script logic
+            const applyEvent = new CustomEvent('bg-settings-updated');
+            document.dispatchEvent(applyEvent);
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    }
+});
+
     </script>
 
 <script>

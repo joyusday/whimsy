@@ -71,6 +71,7 @@
 .menu-section {
     cursor: pointer;
     transition: all 0.3s ease-out;
+    fill: var(--color-minor);
 }
 
 .menu-section:hover {
@@ -89,7 +90,7 @@
 
 /* Highlight Reload and Screenshot buttons */
 .menu-section.reload:hover {
-    fill: #760fa6; /* Tomato color */
+    fill: var(--color-accent-games);; /* Tomato color */
 }
 
 .menu-section.screenshot:hover {

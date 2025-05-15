@@ -5,7 +5,7 @@ function handleKonamiCode(e) {
     if (e.code === konamiCode[konamiIndex]) {
         konamiIndex++;
         if (konamiIndex === konamiCode.length) {
-            window.location.href = "Achievements.html";
+            window.location.href = "fish.mp4";
             konamiIndex = 0;
         }
     } else {

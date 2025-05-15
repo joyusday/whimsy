@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PGPkeygenerator.com - Open Source, free, online and secure PGP key generator</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Athanasios Emmanouilidis">
+    <meta name="keywords" content="PGP, key generator, cryptography, encryption, privacy, public key, private key, PGP encryption, GPG, secure communication, digital signature, email encryption, PGP key management, cryptographic keys, asymmetric encryption, public key infrastructure, data protection, secure messaging, cryptographic security, key pair generation, key storage, security tools, cryptographic software, encryption tools">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#272727">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#272727">
+    <meta name="description" content="Generate secure PGP keys for free online with PGPkeygenerator.com. Safeguard your communications with a trusted Open Source PGP key generator tool.">
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="PGPkeygenerator.com - Generate OpenPGP keys online securely">
+    <meta property="og:description" content="Generate OpenPGP keys online securely.">
+    <meta property="og:url" content="https://pgpkeygenerator.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags for Twitter sharing -->
+    <meta name="twitter:title" content="PGPkeygenerator.com - Generate OpenPGP keys online securely">
+    <meta name="twitter:description" content="Generate OpenPGP keys online securely.">
+
+    <style>
+        body {
+            width: 780px;
+            margin: auto;
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='48' viewBox='0 0 60 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='fancy-rectangles' fill='%23efefef' fill-opacity='1'%3E%3Cpath d='M6 12h6v12H6V12zm12 0h6v12h-6V12zm6-12h6v12h-6V0zM12 0h6v12h-6V0zm0 24h6v12h-6V24zM0 0h6v12H0V0zm6 36h6v12H6V36zm12 0h6v12h-6V36zm12-12h6v12h-6V24zM42 0h6v12h-6V0zm-6 12h6v12h-6V12zm12 0h6v12h-6V12zM36 36h6v12h-6V36zm12 0h6v12h-6V36zm-6-12h6v12h-6V24zm12 0h6v12h-6V24z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            font-family: 'Inter', 'Inter', Helvetica, sans-serif;
+            color: #272727;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #272727;
+        }
+
+        a:visited {
+            color: #272727;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+
+        }
+
+        textarea {
+            resize: none;
+            border: 1px solid #272727;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .button-holder {
+            margin: 10px 0px 10px 0px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #272727;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.15rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 2px 2px #272727;
+        }
+
+        .copy-button:hover, .download-button:hover, #generate-keys-button:hover {
+            text-decoration: underline;
+        }
+
+        .title {
+            margin: 0px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        #keys-holder {
+            padding: 0px 40px 20px 40px;
+            border: 1px solid #272727;
+            border-radius: 15px;
+            background-color: #efefef;
+            box-shadow: 4px 4px;
+            width: 340px;
+            float: right;
+        }
+
+        .copy-button {
+            /* background: linear-gradient(90deg, rgb(255 255 255) 0%, rgb(14 233 195) 0%, rgb(14 233 195) 100%); */
+            color: #272727;
+        }
+
+        .download-button {
+            background: #272727;
+            color: white;
+        }
+
+        #title-holder {
+            background-color: #efefef;
+            padding: 15px;
+            text-align: left;
+            border-radius: 15px;
+            border: 1px solid #272727;
+            box-shadow: 4px 4px;
+            line-height: 150%;
+        }
+
+        #parameters-holder {
+            background-color: #efefef;
+            padding: 15px;
+            margin: 20px 0px;
+            text-align: left;
+            border-radius: 15px;
+            border: 1px solid #272727;
+            box-shadow: 4px 4px;
+        }
+
+        #copyright-holder {
+            clear:both;
+            margin-top: 10px;
+        }
+
+        html .popup-body {
+            text-align: left;
+        }
+
+        html .popup-body p {
+            margin: 5px;
+        }
+
+        html .popup.about .popup-body {
+            font-size: unset;
+            margin-bottom: 15px;
+        }
+
+        html .popup.about .popup-content {
+            background-color: #ffffff;
+            width: min(600px, 90vw);
+        }
+
+        html .popup-title {
+            margin-top: 22px;
+            font-size: min(20px, 11vw);
+            font-weight: 600;
+        }
+
+        #parameters-holder label {
+            display: block;
+            margin: 5px 0px;
+        }
+
+        #generate-keys-button {
+            padding: 48px;
+            border: 1px solid #272727;
+            margin: 20px 0px;
+            color: white;
+            background: #272727;
+        }
+
+        #parameters-holder select,
+        #parameters-holder input {
+            padding: 5px;
+            border: 1px solid #272727;
+            border-radius: 5px;
+        }
+
+        #parameters-holder div {
+            margin-bottom: 10px;
+        }
+
+        #generate-key-button-holder {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #textinput-holder {
+            margin: auto;
+            width: 186px;
+        }
+
+        #parameters-holder select {
+            width: 107%;
+        }
+
+        #parameters-holder input {
+            width: 100%;
+        }
+
+        .key-size-select-holder {
+            display: none;
+        }
+
+        #title-and-parameters-holder {
+            width: 340px;
+            float: left;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                width: 100%;
+                padding: 10px;
+            }
+
+            #keys-holder {
+                padding: 0px 40px 20px 40px;
+                border: 1px solid #272727;
+                border-radius: 15px;
+                background-color: #efefef;
+                box-shadow: 4px 4px;
+                width: 85%;
+                float: left;
+            }
+
+            #title-and-parameters-holder {
+                width: 85%;
+                float: left;
+            }
+
+            #title-holder {
+                width: 100%;
+            }
+
+            #parameters-holder {
+                width: 100%;
+            }
+
+            #copyright-holder {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                float: left;
+            }
+
+            #keys-holder-parent {
+                width: 85%;
+                float: left;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            #keys-holder button {
+                padding: 0.5rem 0.5rem;
+            }
+
+        }
+    </style>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "PGPkeygenerator.com",
+            "url": "https://www.pgpkeygenerator.com/",
+            "description": "Generate OpenPGP keys online securely."
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="title-and-parameters-holder">
+
+        <div id="title-holder">
+            <h1 class="title" style="margin-bottom:0px;">🔑 PGPkeygenerator.com</h1>
+            <p>PGPkeygenerator.com is an <u>Open Source</u>, <u>free</u>, <u>online</u> and <u>secure</u> PGP key
+                generator.</p>
+            <ul>
+                <li><a href="https://github.com/athanasiosem/pgpkeygenerator.com">Open Source project</a>. The <a href="https://openpgpjs.org/">OpenPGP.js</a> library is used.</li>
+                <li>All code <u>runs on the client-side</u>. <u>No servers involved</u>.</li>
+                <li><u>No user tracking</u>. Feel free to <u>unplug the Internet</u> before use.</li>
+            </ul>
+            <p style="margin-bottom:0px;"><a href="faq.html">Read the FAQ</a> for more information or <a href="about-pgp-encryption.html">learn about PGP encryption.</a></p>
+        </div>
+
+        <div id="parameters-holder">
+
+            <div id="textinput-holder">
+                <div>
+                    <label for="options-type">Key Algorithm</label>
+                    <select name="options-type" onchange="keyAlgorithmChanged(this)" id="options-type">
+                        <option value="ecc">ECC</option>
+                        <option value="rsa">RSA</option>
+                    </select>
+                </div>
+
+                <div id="key-size-select-holder" class="key-size-select-holder">
+                    <label for="options-key-size">Key Size</label>
+                    <select name="options-key-size" id="options-key-size">
+                        <option value="4096">4096 bits</option>
+                        <option value="2048">2048 bits</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="options-name">Name</label>
+                    <input type="text" id="options-name">
+                </div>
+
+                <div>
+                    <label for="options-email">Email</label>
+                    <input type="email" id="options-email">
+                </div>
+
+                <div>
+                    <label for="options-passphrase">Passphrase</label>
+                    <input type="text" id="options-passphrase">
+                </div>
+
+                <div>
+                    <label for="options-expiration">Expiration Time</label>
+                    <select name="options-expiration" id="options-expiration">
+                        <option value="0">Never Expires</option>
+                        <option value="31536000">1 Year</option>
+                        <option value="63072000">2 Years</option>
+                        <option value="126144000">4 Years</option>
+                        <option value="252288000">8 Years</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="generate-key-button-holder">
+                <button type="button" id="generate-keys-button" onclick="generateKeys()">Generate Keys</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="keys-holder-parent">
+
+        <div id="keys-holder">
+            <div>
+                <h2>
+                    <label for="private-key-textarea">
+                        Private Key
+                    </label>
+                </h2>
+                <div class="button-holder">
+                    <button id="copy-private-key-button" type="button" content="private-key-textarea"
+                        onclick="copyToClipboard(this)" disabled>Copy</button>
+                    <button id="download-private-key-button" type="button" content="private-key-textarea"
+                        onclick="downloadFile(this)" disabled>Download File</button>
+                </div>
+                <textarea id="private-key-textarea" name="private-key-textarea" rows="10" cols="40" disabled
+                    readonly></textarea>
+            </div>
+
+            <div>
+                <h2>
+                    <label for="public-key-textarea">
+                        Public Key
+                    </label>
+                </h2>
+                <div class="button-holder">
+                    <button id="copy-public-key-button" type="button" content="public-key-textarea"
+                        onclick="copyToClipboard(this)" disabled>Copy</button>
+                    <button id="download-public-key-button" type="button" content="public-key-textarea"
+                        onclick="downloadFile(this)" disabled>Download File</button>
+                </div>
+                <textarea id="public-key-textarea" name="public-key-textarea" rows="10" cols="40" disabled
+                    readonly></textarea>
+            </div>
+
+            <div>
+                <h2>
+                    <label for="revocation-certificate-textarea">
+                        Revocation Certificate
+                    </label>
+                </h2>
+                <div class="button-holder">
+                    <button id="copy-revocation-certificate-button" type="button"
+                        content="revocation-certificate-textarea" onclick="copyToClipboard(this)" disabled>Copy</button>
+                    <button id="download-revocation-certificate-button" type="button"
+                        content="revocation-certificate-textarea" onclick="downloadFile(this)" disabled>Download
+                        File</button>
+                </div>
+                <textarea id="revocation-certificate-textarea" name="revocation-certificate-textarea" rows="10"
+                    cols="40" disabled readonly></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="copyright-holder">Copyright 2025 - <a href="https://emman.dev">Athanasios Emmanouilidis</a></div>
+
+
+    <script>
+
+        const downloadFile = (event) => {
+
+            const textareaName = event.getAttribute('content');
+
+            const link = document.createElement("a");
+            const content = document.querySelector("#" + textareaName).value;
+            const file = new Blob([content], { type: 'text/plain' });
+            link.href = URL.createObjectURL(file);
+            link.download = textareaName.replace("-textarea", "") + ".asc";
+            link.click();
+            URL.revokeObjectURL(link.href);
+        };
+
+        const copyToClipboard = (event) => {
+
+            const textareaName = event.getAttribute('content');
+
+            const textarea = document.querySelector("#" + textareaName);
+
+            // Select the text area
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text of textarea
+            navigator.clipboard.writeText(textarea.value);
+
+            // Alert the copied text
+            alert(textarea.labels[0].textContent.trimStart().trimEnd() + " successfully copied to clipboard.");
+        }
+
+        const keyAlgorithmChanged = (event) => {
+
+            if (event.value == "rsa") {
+                document.querySelector("#key-size-select-holder").classList.remove("key-size-select-holder");
+            } else {
+                document.querySelector("#key-size-select-holder").classList.add("key-size-select-holder");
+            }
+        };
+
+        const worker = new Worker("worker.js");
+        worker.onmessage = async function handleMessageFromMain(msg) {
+
+            privateKeyTextarea.value = msg.data.privateKey;
+            publicKeyTextarea.value = msg.data.publicKey;
+            revocationCertificateTextarea.value = msg.data.revocationCertificate;
+
+            copyPrivateKeyButton.classList.add("copy-button");
+            copyPublicKeyButton.classList.add("copy-button");
+            copyRevocationCertificateButton.classList.add("copy-button");
+
+            downloadPrivateKeyButton.classList.add("download-button");
+            downloadPublicKeyButton.classList.add("download-button");
+            downloadRevocationCertificateButton.classList.add("download-button");
+
+            buttonGenerateKeys.disabled = false;
+
+            copyPrivateKeyButton.disabled = false;
+            copyPublicKeyButton.disabled = false;
+            copyRevocationCertificateButton.disabled = false;
+
+            downloadPrivateKeyButton.disabled = false;
+            downloadPublicKeyButton.disabled = false;
+            downloadRevocationCertificateButton.disabled = false;
+
+            privateKeyTextarea.disabled = false;
+            publicKeyTextarea.disabled = false;
+            revocationCertificateTextarea.disabled = false;
+        };
+
+        const privateKeyTextarea = document.querySelector("#private-key-textarea");
+        const publicKeyTextarea = document.querySelector("#public-key-textarea");
+        const revocationCertificateTextarea = document.querySelector("#revocation-certificate-textarea");
+
+        const buttonGenerateKeys = document.querySelector("#generate-keys-button");
+        const optionsType = document.querySelector("#options-type");
+        const optionsKeySize = document.querySelector("#options-key-size");
+        const optionsName = document.querySelector("#options-name");
+        const optionsEmail = document.querySelector("#options-email");
+        const optionsPassphrase = document.querySelector("#options-passphrase");
+        const optionsExpirationTime = document.querySelector("#options-expiration");
+
+        const copyPrivateKeyButton = document.querySelector("#copy-private-key-button");
+        const copyPublicKeyButton = document.querySelector("#copy-public-key-button");
+        const copyRevocationCertificateButton = document.querySelector("#copy-revocation-certificate-button");
+
+        const downloadPrivateKeyButton = document.querySelector("#download-private-key-button");
+        const downloadPublicKeyButton = document.querySelector("#download-public-key-button");
+        const downloadRevocationCertificateButton = document.querySelector("#download-revocation-certificate-button");
+
+        const generateKeys = () => {
+
+            const optionsTypeValue = optionsType.value;
+            const optionsKeySizeValue = optionsKeySize.value;
+            const optionsNameValue = optionsName.value;
+            const optionsEmailValue = optionsEmail.value;
+            const optionsPassphraseValue = optionsPassphrase.value;
+            const optionsExpirationTimeValue = optionsExpirationTime.value;
+
+            const optionsObject = {
+                optionsTypeValue,
+                optionsKeySizeValue, optionsNameValue,
+                optionsEmailValue, optionsPassphraseValue,
+                optionsExpirationTimeValue
+            };
+            
+            if (!optionsEmail.checkValidity()) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            copyPrivateKeyButton.classList.remove("copy-button");
+            copyPublicKeyButton.classList.remove("copy-button");
+            copyRevocationCertificateButton.classList.remove("copy-button");
+
+            downloadPrivateKeyButton.classList.remove("download-button");
+            downloadPublicKeyButton.classList.remove("download-button");
+            downloadRevocationCertificateButton.classList.remove("download-button");
+
+            buttonGenerateKeys.disabled = true;
+
+            copyPrivateKeyButton.disabled = true;
+            copyPublicKeyButton.disabled = true;
+            copyRevocationCertificateButton.disabled = true;
+            downloadPrivateKeyButton.disabled = true;
+            downloadPublicKeyButton.disabled = true;
+            downloadRevocationCertificateButton.disabled = true;
+
+            worker.postMessage(optionsObject);
+
+        };
+    </script>
+</body>
+
+</html>

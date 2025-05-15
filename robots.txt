@@ -1,0 +1,15 @@
+# Block everything for all crawlers
+User-agent: *
+Disallow: /
+
+User-agent: GoGuardian
+Disallow: /
+
+User-agent: Cisco Umbrella
+Disallow: /
+
+User-agent: Umbrella
+Disallow: /
+
+User-agent: Cisco
+Disallow: /

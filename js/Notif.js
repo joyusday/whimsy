@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const FNotificationId = 'newnwn'; // Change this for each new notification
-  const FNotificationImportance = 3; // Change this to set importance level (1, 2, or 3)
+  const FNotificationId = 'security'; // Change this for each new notification
+  const FNotificationImportance = 2; // Change this to set importance level (1, 2, or 3)
 
   const FNotificationStyles = `
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
@@ -201,13 +201,17 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.innerHTML = `
       <div class="FNotification-modal-content">
 
-<a>Sign Up for the new fratchat, sorry yall!</a>
+<a>Welcome to Fracture</a>
 
+<a>Some small updates have been added and Fracture is now being maintained again</a>
 <br>
+<a>If you want to keep reciving links through email I advise you create a pgp key and sending it in the google form</a><br>
+<a>I recomend now that you are here you regenerate your pgp key in Extras</a>
+<br>
+<br>
+<a>Eaglercraft is on the latest update !</a>
       <br>
-<a> DONT SEND ME EMAILS ABOUT THIS YOU ARE GOING TO GET ME IN MASSIVE TROUBLE</a><br>
-<a> MAKE YOUR OWN FRACTURE BRANCH AND USE IT FOR YOUR SELF </a><br>
-<a> replace the <name>.html in the url bar with tutorial.html </a><br>
+<a>Enjoy your stay</a><br>
         <button class="FNotification-close-btn" onclick="FNotificationClose()">Close Notification</button>
       </div>
     `;
