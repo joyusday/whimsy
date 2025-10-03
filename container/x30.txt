@@ -1,20 +1,14 @@
 [
           {
-            name: "2048",
-            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/2048.html",
-            image: "", // Optional: URL to image
-            description: "Slide tiles to combine numbers and reach 2048!" // Optional: Description shown on hover
+            name: "EagcrftX 1.8.8",
+            url: "https://raw.githubusercontent.com/joyusday/whimsy/refs/heads/main/container/EX_1.8_u53_Offline_Signed.html",
+            image: "https://imgs.search.brave.com/bTaqpp5u85NAKBARtL9Pyfib6vvzo1SddDcadfAF1sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzYw/YWo5ZC9zdHlsZXMv/Y29tbXVuaXR5SWNv/bl9zZXJheXE4Mmc5/MWExLmpwZz9mb3Jt/YXQ9cGpwZyZzPTMy/NjJlMGIxNDk5MzY5/YTQzYzkxMjNkNTYx/MGQ4ZmJmYTQ2MjA2/MmM",
+            description: "The classic experience - May take awhile to load"
           },
           {
-            name: "Snake",
-            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/snake.html",
-            image: "",
-            description: "Classic snake game - eat food and grow longer!"
-          },
-          {
-            name: "Tetris",
-            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/tetris.html",
-            image: "",
-            description: "Arrange falling blocks to clear lines and score points!"
+            name: "Eagcrft 1.12.2",
+            url: "https://raw.githubusercontent.com/joyusday/whimsy/refs/heads/main/container/E1.12_Offline_en_US.html",
+            image: "https://imgs.search.brave.com/bTaqpp5u85NAKBARtL9Pyfib6vvzo1SddDcadfAF1sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzYw/YWo5ZC9zdHlsZXMv/Y29tbXVuaXR5SWNv/bl9zZXJheXE4Mmc5/MWExLmpwZz9mb3Jt/YXQ9cGpwZyZzPTMy/NjJlMGIxNDk5MzY5/YTQzYzkxMjNkNTYx/MGQ4ZmJmYTQ2MjA2/MmM",
+            description: "The newest version - May take a long time to load"
           }
 ]
