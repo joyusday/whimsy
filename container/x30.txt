@@ -1,0 +1,18 @@
+          {
+            name: "2048",
+            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/2048.html",
+            image: "", // Optional: URL to image
+            description: "Slide tiles to combine numbers and reach 2048!" // Optional: Description shown on hover
+          },
+          {
+            name: "Snake",
+            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/snake.html",
+            image: "",
+            description: "Classic snake game - eat food and grow longer!"
+          },
+          {
+            name: "Tetris",
+            url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/tetris.html",
+            image: "",
+            description: "Arrange falling blocks to clear lines and score points!"
+          }
