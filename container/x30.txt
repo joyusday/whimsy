@@ -10,5 +10,30 @@
             url: "https://raw.githubusercontent.com/joyusday/whimsy/refs/heads/main/container/Eaglercraft_1.12_Offline_en_US.html",
             image: "https://imgs.search.brave.com/bTaqpp5u85NAKBARtL9Pyfib6vvzo1SddDcadfAF1sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzYw/YWo5ZC9zdHlsZXMv/Y29tbXVuaXR5SWNv/bl9zZXJheXE4Mmc5/MWExLmpwZz9mb3Jt/YXQ9cGpwZyZzPTMy/NjJlMGIxNDk5MzY5/YTQzYzkxMjNkNTYx/MGQ4ZmJmYTQ2MjA2/MmM",
             description: "The newest version of Eaglercraft. This build is unstable as its new: expect bugs - May take a long time to load"
+          },
+            name: "Tetra Legends",
+            url: "https://drive.google.com/file/d/1y0E90hmUvSeiaa_mAbtZ5WK-Glr-Xtqd/view?usp=drive_link",
+            image: "",
+            description: "The best Tetris on any games site"
+          },
+            name: "Retro Bowl",
+            url: "https://drive.google.com/file/d/1DCV5REyNabKwF8HFdK6U73DuHNtzBWi1/view?usp=drive_link",
+            image: "",
+            description: "2d Football game, you know the rest"
+          },
+            name: "Cookie Clicker",
+            url: "https://drive.google.com/file/d/1aRzQbX5ig2EnxVAnsyS_mJ8aXEZNjMSj/view?usp=drive_link",
+            image: "",
+            description: "Aarons crack"
+          },
+            name: "Galaga",
+            url: "https://drive.google.com/file/d/1NgXyjMrUsaSGCmrukwnqZmJfk8cO1T9I/view?usp=drive_link",
+            image: "",
+            description: "Its Galaga"
+          },
+            name: "",
+            url: "",
+            image: "",
+            description: ""
           }
 ]
