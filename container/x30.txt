@@ -1,3 +1,4 @@
+[
           {
             name: "2048",
             url: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/x30/2048.html",
@@ -16,3 +17,4 @@
             image: "",
             description: "Arrange falling blocks to clear lines and score points!"
           }
+]
