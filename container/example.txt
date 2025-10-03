@@ -1,0 +1,14 @@
+[
+          {
+            name: "Example",
+            url: "https://raw.githubusercontent.com/joyusday/whimsy/refs/heads/main/container/EaglercraftX_1.8_u53_Offline_Signed.html",
+            image: "https://imgs.search.brave.com/bTaqpp5u85NAKBARtL9Pyfib6vvzo1SddDcadfAF1sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzYw/YWo5ZC9zdHlsZXMv/Y29tbXVuaXR5SWNv/bl9zZXJheXE4Mmc5/MWExLmpwZz9mb3Jt/YXQ9cGpwZyZzPTMy/NjJlMGIxNDk5MzY5/YTQzYzkxMjNkNTYx/MGQ4ZmJmYTQ2MjA2/MmM",
+            description: "Woag"
+          },
+          {
+            name: "Example",
+            url: "https://raw.githubusercontent.com/joyusday/whimsy/refs/heads/main/container/Eaglercraft_1.12_Offline_en_US.html",
+            image: "https://imgs.search.brave.com/bTaqpp5u85NAKBARtL9Pyfib6vvzo1SddDcadfAF1sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzYw/YWo5ZC9zdHlsZXMv/Y29tbXVuaXR5SWNv/bl9zZXJheXE4Mmc5/MWExLmpwZz9mb3Jt/YXQ9cGpwZyZzPTMy/NjJlMGIxNDk5MzY5/YTQzYzkxMjNkNTYx/MGQ4ZmJmYTQ2MjA2/MmM",
+            description: "Woag"
+          }
+]
