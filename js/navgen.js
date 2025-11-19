@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navItems = [
         { name: 'Home', link: 'index.html' },
-        { name: 'Games', link: 'google-classroom.html' },
+        { name: 'Games', link: 'classlink.html' },
         { name: 'Extras', link: 'google-drive.html' },
         { name: 'Docs', link: 'Docs/Index.html' },
         { name: 'Frat-Chat', link: 'chat.html' },
